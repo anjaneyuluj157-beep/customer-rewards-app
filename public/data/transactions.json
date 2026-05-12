@@ -14,129 +14,191 @@
     "date": "2025-02-10"
   },
   {
+    "customerId": "C001",
+    "customerName": "John Doe",
+    "transactionId": "T1003",
+    "amount": 210,
+    "date": "2024-11-12"
+  },
+  {
+    "customerId": "C001",
+    "customerName": "John Doe",
+    "transactionId": "T1004",
+    "amount": 45,
+    "date": "2023-08-05"
+  },
+
+  {
     "customerId": "C002",
     "customerName": "Jane Smith",
-    "transactionId": "T1003",
+    "transactionId": "T1005",
     "amount": 140,
     "date": "2025-03-05"
   },
   {
-    "customerId": "C003",
-    "customerName": "Michael Johnson",
-    "transactionId": "T1004",
-    "amount": 45,
-    "date": "2025-02-20"
-  },
-    {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1001",
-    "amount": 120,
-    "date": "2025-01-15"
-  },
-  {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1002",
-    "amount": 75,
-    "date": "2025-02-10"
+    "customerId": "C002",
+    "customerName": "Jane Smith",
+    "transactionId": "T1006",
+    "amount": 98,
+    "date": "2024-06-18"
   },
   {
     "customerId": "C002",
     "customerName": "Jane Smith",
-    "transactionId": "T1003",
-    "amount": 140,
-    "date": "2025-03-05"
-  },
-  {
-    "customerId": "C003",
-    "customerName": "Michael Johnson",
-    "transactionId": "T1004",
-    "amount": 45,
-    "date": "2025-02-20"
-  },
-    {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1001",
-    "amount": 120,
-    "date": "2025-01-15"
-  },
-  {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1002",
-    "amount": 75,
-    "date": "2025-02-10"
+    "transactionId": "T1007",
+    "amount": 160,
+    "date": "2022-09-10"
   },
   {
     "customerId": "C002",
     "customerName": "Jane Smith",
-    "transactionId": "T1003",
-    "amount": 140,
-    "date": "2025-03-05"
+    "transactionId": "T1008",
+    "amount": 30,
+    "date": "2021-12-01"
+  },
+
+  {
+    "customerId": "C003",
+    "customerName": "Michael Johnson",
+    "transactionId": "T1009",
+    "amount": 45,
+    "date": "2025-02-20"
   },
   {
     "customerId": "C003",
     "customerName": "Michael Johnson",
-    "transactionId": "T1004",
-    "amount": 45,
-    "date": "2025-02-20"
-  },
-    {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1001",
-    "amount": 120,
-    "date": "2025-01-15"
-  },
-  {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1002",
-    "amount": 75,
-    "date": "2025-02-10"
-  },
-  {
-    "customerId": "C002",
-    "customerName": "Jane Smith",
-    "transactionId": "T1003",
-    "amount": 140,
-    "date": "2025-03-05"
+    "transactionId": "T1010",
+    "amount": 125,
+    "date": "2024-07-14"
   },
   {
     "customerId": "C003",
     "customerName": "Michael Johnson",
-    "transactionId": "T1004",
-    "amount": 45,
-    "date": "2025-02-20"
-  },
-    {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1001",
-    "amount": 120,
-    "date": "2025-01-15"
-  },
-  {
-    "customerId": "C001",
-    "customerName": "John Doe",
-    "transactionId": "T1002",
-    "amount": 75,
-    "date": "2025-02-10"
-  },
-  {
-    "customerId": "C002",
-    "customerName": "Jane Smith",
-    "transactionId": "T1003",
-    "amount": 140,
-    "date": "2025-03-05"
+    "transactionId": "T1011",
+    "amount": 85,
+    "date": "2023-03-11"
   },
   {
     "customerId": "C003",
     "customerName": "Michael Johnson",
-    "transactionId": "T1004",
-    "amount": 45,
-    "date": "2025-02-20"
+    "transactionId": "T1012",
+    "amount": 220,
+    "date": "2022-01-09"
+  },
+
+  {
+    "customerId": "C004",
+    "customerName": "Emily Davis",
+    "transactionId": "T1013",
+    "amount": 180,
+    "date": "2024-12-18"
+  },
+  {
+    "customerId": "C004",
+    "customerName": "Emily Davis",
+    "transactionId": "T1014",
+    "amount": 70,
+    "date": "2023-05-22"
+  },
+  {
+    "customerId": "C004",
+    "customerName": "Emily Davis",
+    "transactionId": "T1015",
+    "amount": 135,
+    "date": "2022-10-03"
+  },
+  {
+    "customerId": "C004",
+    "customerName": "Emily Davis",
+    "transactionId": "T1016",
+    "amount": 48,
+    "date": "2021-04-17"
+  },
+
+  {
+    "customerId": "C005",
+    "customerName": "David Wilson",
+    "transactionId": "T1017",
+    "amount": 95,
+    "date": "2025-01-05"
+  },
+  {
+    "customerId": "C005",
+    "customerName": "David Wilson",
+    "transactionId": "T1018",
+    "amount": 150,
+    "date": "2024-08-21"
+  },
+  {
+    "customerId": "C005",
+    "customerName": "David Wilson",
+    "transactionId": "T1019",
+    "amount": 200,
+    "date": "2023-09-14"
+  },
+  {
+    "customerId": "C005",
+    "customerName": "David Wilson",
+    "transactionId": "T1020",
+    "amount": 65,
+    "date": "2022-11-30"
+  },
+
+  {
+    "customerId": "C006",
+    "customerName": "Sophia Brown",
+    "transactionId": "T1021",
+    "amount": 220,
+    "date": "2025-03-11"
+  },
+  {
+    "customerId": "C006",
+    "customerName": "Sophia Brown",
+    "transactionId": "T1022",
+    "amount": 175,
+    "date": "2024-02-08"
+  },
+  {
+    "customerId": "C006",
+    "customerName": "Sophia Brown",
+    "transactionId": "T1023",
+    "amount": 80,
+    "date": "2023-07-19"
+  },
+  {
+    "customerId": "C006",
+    "customerName": "Sophia Brown",
+    "transactionId": "T1024",
+    "amount": 49,
+    "date": "2021-01-01"
+  },
+
+  {
+    "customerId": "C007",
+    "customerName": "Chris Taylor",
+    "transactionId": "T1025",
+    "amount": 60,
+    "date": "2024-11-25"
+  },
+  {
+    "customerId": "C007",
+    "customerName": "Chris Taylor",
+    "transactionId": "T1026",
+    "amount": 130,
+    "date": "2023-12-15"
+  },
+  {
+    "customerId": "C007",
+    "customerName": "Chris Taylor",
+    "transactionId": "T1027",
+    "amount": 250,
+    "date": "2022-06-07"
+  },
+  {
+    "customerId": "C007",
+    "customerName": "Chris Taylor",
+    "transactionId": "T1028",
+    "amount": 90,
+    "date": "2021-09-23"
   }
 ]
