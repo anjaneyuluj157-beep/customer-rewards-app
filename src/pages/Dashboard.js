@@ -11,7 +11,11 @@ import FilterBar from "../components/FilterBar";
 import Pagination from "../components/Pagination";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
-import { PageContainer, Heading } from "../styles/globalStyles";
+
+import {
+  PageContainer,
+  Heading,
+} from "../styles/globalStyles";
 
 import calculateRewards from "../utils/calculateRewards";
 
@@ -19,7 +23,17 @@ import {
   fetchTransactions,
 } from "../services/transactionService";
 
+import logger from "../logger";
+
 function Dashboard() {
+  const currentMonth =
+    new Date().toLocaleString(
+      "default",
+      {
+        month: "long",
+      }
+    );
+
   const [transactions, setTransactions] =
     useState([]);
 
@@ -33,7 +47,7 @@ function Dashboard() {
     useState("");
 
   const [selectedMonth, setSelectedMonth] =
-    useState("");
+    useState(currentMonth);
 
   const [selectedYear, setSelectedYear] =
     useState("2025");
@@ -59,6 +73,10 @@ function Dashboard() {
     try {
       setLoading(true);
 
+      logger.info(
+        "Fetching transactions"
+      );
+
       const data =
         await fetchTransactions();
 
@@ -74,7 +92,15 @@ function Dashboard() {
       setTransactions(
         updatedTransactions
       );
+
+      logger.info(
+        "Transactions loaded successfully"
+      );
     } catch (err) {
+      logger.error(
+        "Failed to load transactions"
+      );
+
       setError(
         "Failed to load transactions"
       );
@@ -210,6 +236,37 @@ function Dashboard() {
     );
   }, [filteredTransactions]);
 
+  const handleCustomerSelection =
+    (customer) => {
+      logger.info(
+        `Customer selected: ${customer.customerName}`
+      );
+
+      setSelectedCustomer(
+        customer
+      );
+    };
+
+  const handleMonthChange = (
+    month
+  ) => {
+    logger.info(
+      `Month filter selected: ${month}`
+    );
+
+    setSelectedMonth(month);
+  };
+
+  const handleYearChange = (
+    year
+  ) => {
+    logger.info(
+      `Year filter selected: ${year}`
+    );
+
+    setSelectedYear(year);
+  };
+
   if (loading) {
     return <Loader />;
   }
@@ -224,7 +281,9 @@ function Dashboard() {
 
   return (
     <PageContainer>
-      <Heading> Customer Rewards Dashboard </Heading>
+      <Heading>
+        Customer Rewards Dashboard
+      </Heading>
 
       <CustomerList
         customers={customers}
@@ -232,7 +291,7 @@ function Dashboard() {
           selectedCustomer
         }
         onSelectCustomer={
-          setSelectedCustomer
+          handleCustomerSelection
         }
       />
 
@@ -246,10 +305,10 @@ function Dashboard() {
               selectedYear
             }
             onMonthChange={
-              setSelectedMonth
+              handleMonthChange
             }
             onYearChange={
-              setSelectedYear
+              handleYearChange
             }
           />
 

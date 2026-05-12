@@ -21,8 +21,11 @@ function TransactionsTable({
             <th>
               Transaction ID
             </th>
+
             <th>Amount</th>
+
             <th>Date</th>
+
             <th>
               Reward Points
             </th>
@@ -72,7 +75,18 @@ function TransactionsTable({
 
 TransactionsTable.propTypes = {
   transactions:
-    PropTypes.array.isRequired,
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        transactionId:
+          PropTypes.string.isRequired,
+        amount:
+          PropTypes.number.isRequired,
+        date:
+          PropTypes.string.isRequired,
+        rewardPoints:
+          PropTypes.number.isRequired,
+      })
+    ).isRequired,
 };
 
 export default TransactionsTable;

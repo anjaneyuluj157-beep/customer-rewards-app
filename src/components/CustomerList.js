@@ -43,9 +43,23 @@ function CustomerList({
 
 CustomerList.propTypes = {
   customers:
-    PropTypes.array.isRequired,
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        customerId:
+          PropTypes.string.isRequired,
+        customerName:
+          PropTypes.string.isRequired,
+      })
+    ).isRequired,
+
   selectedCustomer:
-    PropTypes.object,
+    PropTypes.shape({
+      customerId:
+        PropTypes.string,
+      customerName:
+        PropTypes.string,
+    }),
+
   onSelectCustomer:
     PropTypes.func.isRequired,
 };
