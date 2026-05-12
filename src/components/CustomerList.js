@@ -1,18 +1,30 @@
 import PropTypes from "prop-types";
 
+import {
+  SectionCard,
+  SubHeading,
+  StyledButton,
+} from "../styles/globalStyles";
+
 function CustomerList({
   customers,
   selectedCustomer,
   onSelectCustomer,
 }) {
   return (
-    <div>
-      <h2>Customers</h2>
+    <SectionCard>
+      <SubHeading>
+        Customers
+      </SubHeading>
 
       <div>
         {customers.map((customer) => (
-          <button
+          <StyledButton
             key={
+              customer.customerId
+            }
+            active={
+              selectedCustomer?.customerId ===
               customer.customerId
             }
             onClick={() =>
@@ -20,26 +32,12 @@ function CustomerList({
                 customer
               )
             }
-            style={{
-              marginRight: "10px",
-              marginBottom: "10px",
-              padding: "10px 15px",
-              border:
-                "1px solid #ccc",
-              borderRadius: "5px",
-              cursor: "pointer",
-              backgroundColor:
-                selectedCustomer?.customerId ===
-                customer.customerId
-                  ? "#d3d3d3"
-                  : "#fff",
-            }}
           >
             {customer.customerName}
-          </button>
+          </StyledButton>
         ))}
       </div>
-    </div>
+    </SectionCard>
   );
 }
 

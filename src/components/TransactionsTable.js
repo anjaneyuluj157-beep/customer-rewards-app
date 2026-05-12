@@ -1,22 +1,21 @@
 import PropTypes from "prop-types";
 
+import {
+  SectionCard,
+  StyledTable,
+  SubHeading,
+} from "../styles/globalStyles";
+
 function TransactionsTable({
   transactions,
 }) {
   return (
-    <div>
-      <h2>Transactions</h2>
+    <SectionCard>
+      <SubHeading>
+        Transactions
+      </SubHeading>
 
-      <table
-        border="1"
-        cellPadding="10"
-        style={{
-          borderCollapse:
-            "collapse",
-          width: "100%",
-          marginTop: "20px",
-        }}
-      >
+      <StyledTable>
         <thead>
           <tr>
             <th>
@@ -66,8 +65,8 @@ function TransactionsTable({
             )
           )}
         </tbody>
-      </table>
-    </div>
+      </StyledTable>
+    </SectionCard>
   );
 }
 

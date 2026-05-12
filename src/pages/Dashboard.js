@@ -11,6 +11,7 @@ import FilterBar from "../components/FilterBar";
 import Pagination from "../components/Pagination";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
+import { PageContainer, Heading } from "../styles/globalStyles";
 
 import calculateRewards from "../utils/calculateRewards";
 
@@ -222,10 +223,8 @@ function Dashboard() {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>
-        Customer Rewards Dashboard
-      </h1>
+    <PageContainer>
+      <Heading> Customer Rewards Dashboard </Heading>
 
       <CustomerList
         customers={customers}
@@ -291,7 +290,7 @@ function Dashboard() {
           )}
         </>
       )}
-    </div>
+    </PageContainer>
   );
 }
 

@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# Customer Rewards App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This application calculates reward points for customers based on their transactions.
 
-In the project directory, you can run:
+Customers receive:
+- 2 points for every dollar spent over $100
+- 1 point for every dollar spent between $50 and $100
 
-### `npm start`
+Example:
+- Purchase of $120:
+  - 2 × 20 = 40 points
+  - 1 × 50 = 50 points
+  - Total = 90 points
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Features
 
-### `npm test`
+- Customer rewards dashboard
+- Dynamic customer listing
+- Monthly reward summary
+- Total reward points calculation
+- Month and year filters
+- Transactions table
+- Pagination support
+- Async API simulation
+- Loading and error handling
+- Transaction logging using Pino
+- Unit testing with Jest
+- Styled-components based UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+# Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React JS
+- JavaScript (ES6)
+- Styled Components
+- PropTypes
+- Jest
+- Pino Logger
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Folder Structure
 
-### `npm run eject`
+src/
+│
+├── components/
+├── constants/
+├── pages/
+├── services/
+├── styles/
+├── tests/
+├── utils/
+│
+├── App.js
+├── index.js
+└── logger.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Reward Calculation Logic
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Amount below or equal to $50:
+  - 0 points
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Amount between $51 and $100:
+  - 1 point for every dollar above $50
 
-## Learn More
+- Amount above $100:
+  - 2 points for every dollar above $100
+  - Plus 50 points for amount between $50 and $100
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Setup Instructions
 
-### Code Splitting
+## Clone Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+git clone <repository-url>
 
-### Analyzing the Bundle Size
+## Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install
 
-### Making a Progressive Web App
+## Start Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+Application runs on:
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+# Run Test Cases
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm test
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# API Simulation
+
+The application uses:
+- local JSON mock data
+- Promise
+- setTimeout
+
+to simulate async API behavior.
+
+---
+
+# Logging
+
+Pino logger is used for:
+- API fetch logs
+- Error logs
+
+---
+
+# Test Cases Included
+
+Positive Test Cases:
+- Reward calculation for amount above 100
+- Reward calculation for amount between 50 and 100
+- Reward calculation for large amounts
+
+Negative / Edge Cases:
+- Amount below 50
+- Negative amount
+- Decimal amount
+- Exactly 50
+- Exactly 100
+
+---
+
+# Screenshots
+
+Add screenshots here:
+- Dashboard UI
+- Filters
+- Pagination
+- Test case success
+
+---
+
+# Future Improvements
+
+- Add charts and analytics
+- Export reports
+- Advanced filtering
+- Search functionality
+
+---
+
+# Author
+
+Javisetty Anjaneyulu
